@@ -1,6 +1,10 @@
-#!/bib/bash
+#!/bin/bash
 
 # Deploy AKS fresh cluster first
+
+export KUBECONFIG=../aks-fresh-cluster/k8s_config/azurek8s
+kubectl get nodes
+kubectl top nodes
 
 # Check cluster
 kubectl cluster-info
@@ -20,3 +24,7 @@ kubectl apply -f manifests/mysql-deployment.yaml
 # Verify
 kubectl get pods
 kubectl get services
+
+
+## Verify SQL
+### Install SQL tool if needed: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools

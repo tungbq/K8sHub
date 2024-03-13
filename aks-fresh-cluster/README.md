@@ -58,6 +58,7 @@ resource_group_name=$(terraform output -raw resource_group_name)
 az aks list --resource-group $resource_group_name --query "[].{\"K8s cluster name\":name}" --output table
 # NOTE: Do not commit the `./k8s_config/azurek8s` file
 # I've already added the `k8s_config` folder to the .gitignore. But just for sure!
+mkdir k8s_config
 echo "$(terraform output kube_config)" > ./k8s_config/azurek8s
 ```
 
