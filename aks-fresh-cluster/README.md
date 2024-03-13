@@ -2,7 +2,9 @@
 
 ## Prerequisite
 
-An Azure account with an active subscription
+- An Azure account with an active subscription
+- Azure CLI
+- Terraform
 
 ## Authenticate to Azure
 
