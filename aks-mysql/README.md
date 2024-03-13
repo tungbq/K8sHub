@@ -20,6 +20,26 @@ chmod +x mysql_deploy.sh
 ### Install SQL tool if needed: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools
 
 ```bash
+# Get EXTERNAL-IP
+kubectl get services
+## Now replace the external IP by yours
 sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd"
 
+```
+
+- Result would looks like:
+
+```sql
+1> PRINT "Length: 5"" 7'";
+2> GO
+Length: 5" 7'
+1>
+```
+
+## Troubleshooting
+
+- SSL Provider: [error:0A000086:SSL routines::certificate verify failed: Adding `-C`
+
+```bash
+sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd" -C
 ```
