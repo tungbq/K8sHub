@@ -24,7 +24,3 @@ kubectl apply -f manifests/mysql-deployment.yaml
 # Verify
 kubectl get pods
 kubectl get services
-
-
-## Verify SQL
-### Install SQL tool if needed: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools

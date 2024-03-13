@@ -7,3 +7,19 @@ Deploy a SQL Server container cluster on AKS with Azure disk
 - An Azure account with an active subscription
 - A AKS cluster. For more information on creating and connecting to a Kubernetes cluster in AKS with kubectl, see [aks-fresh-cluster](../aks-fresh-cluster/)
 - Azure CLI.
+
+## Deloy
+
+```bash
+chmod +x mysql_deploy.sh
+./mysql_deploy.sh
+```
+
+## Verify SQL
+
+### Install SQL tool if needed: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools
+
+```bash
+sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd"
+
+```
