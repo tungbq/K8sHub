@@ -43,3 +43,7 @@ Length: 5" 7'
 ```bash
 sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd" -C
 ```
+
+## Cleanup
+
+Remove and teardown cluster as per instruction in [aks-fresh-cluster](../aks-fresh-cluster/)
