@@ -21,11 +21,11 @@ spec:
         image: mcr.microsoft.com/mssql/server:2022-latest
         resources:
           requests:
-            memory: "2G"
-            cpu: "2000m"
+            memory: "1G"
+            cpu: "50m"
           limits:
-            memory: "2G"
-            cpu: "2000m"
+            memory: "1G"
+            cpu: "50m"
         ports:
         - containerPort: 1433
         env:
