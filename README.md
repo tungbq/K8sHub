@@ -9,7 +9,8 @@
   <a href="https://github.com/tungbq/k8s-hub/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tungbq/k8s-hub"/></a>
 </p>
 
-| ID  | Content                                     | URL                                       | Status  |
-| :-- | :------------------------------------------ | :---------------------------------------- | :------ |
-| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/) | ✔️ Done |
-| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./aks-mysql/)                 | ✔️ Done |
+| ID  | Content                                     | URL                                                      | Status  |
+| :-- | :------------------------------------------ | :------------------------------------------------------- | :------ |
+| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/)                | ✔️ Done |
+| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./aks-mysql/)                                | ✔️ Done |
+| 03  | Deploy microservices application            | [microservices-application](./microservices-application) | ✔️ Done |
