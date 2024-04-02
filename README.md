@@ -1,6 +1,13 @@
 # K8s Hub
 
-Kubernetes deployment samples, practices, and examples
+<h1 align="center">K8s Hub</h1>
+
+<p align="center">Kubernetes deployment samples, practices, and examples</p>
+
+<p align="center">
+  <a href="https://img.shields.io/github/last-commit/tungbq/k8s-hub/main"><img alt="last commit" src="https://img.shields.io/github/last-commit/tungbq/k8s-hub/main" /></a>
+  <a href="https://github.com/tungbq/k8s-hub/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tungbq/k8s-hub"/></a>
+</p>
 
 | ID  | Content                                     | URL                                       | Status  |
 | :-- | :------------------------------------------ | :---------------------------------------- | :------ |
