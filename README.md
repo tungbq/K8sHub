@@ -1,4 +1,4 @@
-# k8s-labs
+# K8s Hub
 
 Kubernetes deployment samples, practices, and examples
 
