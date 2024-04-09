@@ -28,3 +28,5 @@ kubectl cluster-info
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml
 ```
+
+### 2-
