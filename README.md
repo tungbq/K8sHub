@@ -11,12 +11,13 @@
 
 ## Getting Started 🚀
 
-- Official doc: https://kubernetes.io/
-- Basics: https://github.com/tungbq/devops-basics/tree/main/topics/k8s
+- Official doc: [here](https://kubernetes.io/)
+- K8s Basics: [here](https://github.com/tungbq/devops-basics/tree/main/topics/k8s)
 
-## Project
+## Hands-on projects 💥
 
-| ID  | Content                                     | URL                                       | Status  |
-| :-- | :------------------------------------------ | :---------------------------------------- | :------ |
-| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/) | ✔️ Done |
-| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./aks-mysql/)                 | ✔️ Done |
+| ID  | Content                                        | URL                                                                            | Status  |
+| :-- | :--------------------------------------------- | :----------------------------------------------------------------------------- | :------ |
+| 01  | Provision fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./hands-on/aks-fresh-cluster/)                             | ✔️ Done |
+| 02  | Deploy MYSQL on AKS                            | [aks-mysql](./hands-on/aks-mysql/)                                             | ✔️ Done |
+| 03  | Deploy basic microservices                     | [basic-microservices-application](./hands-on/basic-microservices-application/) | ✔️ Done |
