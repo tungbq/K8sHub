@@ -16,8 +16,8 @@
 
 ## Hands-on projects
 
-| ID  | Content                                     | URL                                                                | Status  |
-| :-- | :------------------------------------------ | :----------------------------------------------------------------- | :------ |
-| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./hands-on/aks-fresh-cluster/)                 | ✔️ Done |
-| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./hands-on/aks-mysql/)                                 | ✔️ Done |
-| 03  | Deploy microservices                        | [microservices-application](./hands-on/microservices-application/) | ✔️ Done |
+| ID  | Content                                        | URL                                                                            | Status  |
+| :-- | :--------------------------------------------- | :----------------------------------------------------------------------------- | :------ |
+| 01  | Provision fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./hands-on/aks-fresh-cluster/)                             | ✔️ Done |
+| 02  | Deploy MYSQL on AKS                            | [aks-mysql](./hands-on/aks-mysql/)                                             | ✔️ Done |
+| 03  | Deploy basic microservices                     | [basic-microservices-application](./hands-on/basic-microservices-application/) | ✔️ Done |
