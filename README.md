@@ -16,7 +16,8 @@
 
 ## Project
 
-| ID  | Content                                     | URL                                       | Status  |
-| :-- | :------------------------------------------ | :---------------------------------------- | :------ |
-| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/) | ✔️ Done |
-| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./aks-mysql/)                 | ✔️ Done |
+| ID  | Content                                     | URL                                                       | Status  |
+| :-- | :------------------------------------------ | :-------------------------------------------------------- | :------ |
+| 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/)                 | ✔️ Done |
+| 02  | Deploy MYSQL on AKS                         | [aks-mysql](./aks-mysql/)                                 | ✔️ Done |
+| 03  | Deploy microservices                        | [microservices-application](./microservices-application/) | ✔️ Done |
