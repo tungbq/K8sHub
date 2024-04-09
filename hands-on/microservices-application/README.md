@@ -40,7 +40,7 @@ kubectl get svc
 # forward
 kubectl port-forward svc/frontend 8080:80
 ```
-
+Now we can visit: http://localhost:8080/  
 ### 3-Cleanup
 
 Delete the app
