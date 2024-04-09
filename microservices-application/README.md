@@ -23,10 +23,20 @@ kubectl get nodes
 kubectl cluster-info
 ```
 
-### 1-Deploy
+### 1-Deploy application
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml
 ```
 
-### 2-
+### 2-Access the application
+
+Access the web frontend in a browser using the frontend's port-forwaring.
+
+```bash
+# check services
+kubectl get svc
+
+# forward
+kubectl port-forward svc/frontend 8080:80
+```
