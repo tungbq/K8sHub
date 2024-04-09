@@ -11,8 +11,8 @@
 
 ## Getting Started 🚀
 
-- Official doc: https://kubernetes.io/
-- Basics: https://github.com/tungbq/devops-basics/tree/main/topics/k8s
+- Official doc: [here](https://kubernetes.io/)
+- K8s Basics: [here](https://github.com/tungbq/devops-basics/tree/main/topics/k8s)
 
 ## Hands-on projects
 
