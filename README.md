@@ -9,6 +9,13 @@
   <a href="https://github.com/tungbq/k8s-hub/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tungbq/k8s-hub"/></a>
 </p>
 
+## Getting Started 🚀
+
+- Official doc: https://kubernetes.io/
+- Basics: https://github.com/tungbq/devops-basics/tree/main/topics/k8s
+
+## Project
+
 | ID  | Content                                     | URL                                       | Status  |
 | :-- | :------------------------------------------ | :---------------------------------------- | :------ |
 | 01  | Create fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./aks-fresh-cluster/) | ✔️ Done |
