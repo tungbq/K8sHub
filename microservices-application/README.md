@@ -46,5 +46,5 @@ kubectl port-forward svc/frontend 8080:80
 Delete the app
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml
+kubectl delete -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/main/release/kubernetes-manifests.yaml
 ```
