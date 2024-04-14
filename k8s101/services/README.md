@@ -31,3 +31,10 @@ kubectl port-forward svc/sample-service 8081:80 # Replace `8081` by your favorit
 ```bash
 curl localhost:8081
 ```
+
+## Cleanup
+
+```bash
+kubectl delete -f ../deployment/deployment.yaml
+kubectl delete -f services.yaml
+```
