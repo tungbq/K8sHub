@@ -1,5 +1,7 @@
 # MySQL deployment
 
+Run a single-instance stateful MYSQL application
+
 ## Deploy
 
 ```bash
