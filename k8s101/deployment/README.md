@@ -28,3 +28,9 @@ sample-deployment-5595794bc9-bhgpt   1/1     Running   0          4m43s
 sample-deployment-5595794bc9-rnb2s   1/1     Running   0          4m43s
 ➜  deployment git:(101-deployment) ✗
 ```
+
+## Cleanup
+
+```bash
+kubectl delete -f deployment.yaml
+```
