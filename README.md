@@ -16,8 +16,9 @@
 
 ## Hands-on projects 💥
 
-| ID  | Content                                        | URL                                                                            | Status  |
-| :-- | :--------------------------------------------- | :----------------------------------------------------------------------------- | :------ |
-| 01  | Provision fresh AKS k8s cluster with terraform | [aks-fresh-cluster](./hands-on/aks-fresh-cluster/)                             | ✔️ Done |
-| 02  | Deploy MYSQL on AKS                            | [aks-mysql](./hands-on/aks-mysql/)                                             | ✔️ Done |
-| 03  | Deploy basic microservices                     | [basic-microservices-application](./hands-on/basic-microservices-application/) | ✔️ Done |
+| ID  | Content                                               | URL                                                                            | Status  |
+| :-- | :---------------------------------------------------- | :----------------------------------------------------------------------------- | :------ |
+| 01  | Provision fresh AKS k8s cluster with terraform        | [aks-fresh-cluster](./hands-on/aks-fresh-cluster/)                             | ✔️ Done |
+| 02  | Deploy MYSQL on AKS                                   | [aks-mysql](./hands-on/aks-mysql/)                                             | ✔️ Done |
+| 03  | Deploy basic microservices                            | [basic-microservices-application](./hands-on/basic-microservices-application/) | ✔️ Done |
+| 04  | Deploy a Nginx Edge proxy in front of k8s application | [k8s-edge-proxy](./hands-on/k8s-edge-proxy/)                                   | ✔️ Done |
