@@ -3,3 +3,4 @@
 | ID  | Content    | URL                       | Status  |
 | :-- | :--------- | :------------------------ | :------ |
 | 01  | Deployment | [deployment](deployment/) | ✔️ Done |
+| 02  | Services   | [services](services/)     | ✔️ Done |
