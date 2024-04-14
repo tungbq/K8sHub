@@ -20,6 +20,10 @@
 - Official doc: [here](https://kubernetes.io/)
 - K8s Basics: [here](https://github.com/tungbq/devops-basics/tree/main/topics/k8s)
 
+## K8s-101
+
+- [k8s101](./k8s101/README.md)
+
 ## Hands-on projects 💥
 
 | ID  | Content                                               | URL                                                                            | Status  |
