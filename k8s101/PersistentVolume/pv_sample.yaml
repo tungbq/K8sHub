@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: example-pv
+  labels:
+    type: local
+spec:
+  storageClassName: example-storage-class
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/data_demo"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: example-pv-claim
+spec:
+  storageClassName: example-storage-class
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pv-pod
+spec:
+  containers:
+    - name: task-pv-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: example-pv-storage
+  volumes:
+    - name: example-pv-storage
+      persistentVolumeClaim:
+        claimName: example-pv-claim
