@@ -20,5 +20,5 @@ kubectl get pvc
 ## Cleanup
 
 ```bash
-kubectl delete -f k8s101/PVC/pv_sample.yaml
+kubectl delete -f k8s101/PersistentVolume/pv_sample.yaml
 ```
