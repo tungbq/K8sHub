@@ -1,0 +1,42 @@
+##################
+# Define ConfigMap
+##################
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-configmap
+data:
+  app_name: MyApp
+  app_version: "1.0"
+---
+###############
+# Use ConfigMap
+###############
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-map-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: example-app
+  template:
+    metadata:
+      labels:
+        app: example-app
+    spec:
+      containers:
+        - name: app-container
+          image: my/app-image:latest
+          env:
+            - name: APP_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: example-configmap
+                  key: app_name
+            - name: APP_VERSION
+              valueFrom:
+                configMapKeyRef:
+                  name: example-configmap
+                  key: app_version
