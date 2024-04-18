@@ -1,5 +1,8 @@
 # StatefulSet 101
 
+- StatefulSet is the workload API object used to manage stateful applications.
+- Doc: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+
 ## Open a watching terminal
 
 ```bash
