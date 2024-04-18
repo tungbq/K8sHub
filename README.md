@@ -20,9 +20,13 @@
 - Official doc: [here](https://kubernetes.io/)
 - K8s Basics: [here](https://github.com/tungbq/devops-basics/tree/main/topics/k8s)
 
+## K8s Concepts
+
+Concepts doc ➡️ [here](https://kubernetes.io/docs/concepts/)
+
 ## K8s-101
 
-- [k8s101](./k8s101/README.md)
+Visit ➡️ [k8s101](./k8s101/README.md)
 
 ## Hands-on projects 💥
 
