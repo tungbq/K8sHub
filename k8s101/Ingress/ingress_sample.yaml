@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web2
+  name: web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web2
+      app: web
   template:
     metadata:
       labels:
-        app: web2
+        app: web
     spec:
       containers:
-        - name: web2-container
+        - name: web-container
           image: gcr.io/google-samples/hello-app:2.0
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: web2-service
+  name: web-service
 spec:
   selector:
-    app: web2
+    app: web
   ports:
     - protocol: TCP
       port: 80
@@ -44,6 +44,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: web2-service
+                name: web-service
                 port:
                   number: 80
