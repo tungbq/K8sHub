@@ -41,7 +41,7 @@ Now, forward a local port to the ingress controller:
 ```bash
 kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8081:80
 
-curl --resolve demo.localdev.me:8081:127.0.0.1 http://demo.localdev.me:8081
+curl --resolve demo.localdev.me:127.0.0.1 http://demo.localdev.me
 ```
 
 Or visit http://demo.localdev.me
