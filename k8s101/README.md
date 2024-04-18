@@ -7,3 +7,4 @@
 | 03  | ConfigMap        | [ConfigMap](ConfigMap/)               | ✔️ Done |
 | 04  | PersistentVolume | [PersistentVolume](PersistentVolume/) | ✔️ Done |
 | 05  | StatefulSet      | [StatefulSet](StatefulSet/)           | ✔️ Done |
+| 06  | ReplicaSet       | [ReplicaSet](ReplicaSet/)             | ✔️ Done |
