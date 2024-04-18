@@ -6,3 +6,4 @@
 | 02  | Service          | [Service](Service/)                   | ✔️ Done |
 | 03  | ConfigMap        | [ConfigMap](ConfigMap/)               | ✔️ Done |
 | 04  | PersistentVolume | [PersistentVolume](PersistentVolume/) | ✔️ Done |
+| 05  | StatefulSet      | [StatefulSet](StatefulSet/)           | ✔️ Done |
