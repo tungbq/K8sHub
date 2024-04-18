@@ -1,3 +1,4 @@
+# Deployment resource for the web application
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,6 +17,7 @@ spec:
         - name: web-container
           image: gcr.io/google-samples/hello-app:2.0
 ---
+# Service resource for exposing the web application
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,25 +27,11 @@ spec:
     app: web
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8082
+      port: 8093
+      targetPort: 8080
   type: NodePort
-# ---
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: hello-ingress 
-# spec:
-#   rules:
-#   - host: hello-test.internal
-#     http:
-#       paths:
-#       - path: /
-#         backend:
-#           serviceName: web-service 
-#           servicePort: 8082
-
 ---
+# Ingress resource for routing external traffic to the web application
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -59,6 +47,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: web-service 
+            name: web-service
             port:
-              number: 80
+              number: 8093
