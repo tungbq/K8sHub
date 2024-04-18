@@ -3,7 +3,7 @@
 ## Deploy
 
 ```bash
-kubectl apply -f deployment.yaml
+kubectl apply -f k8s101/Deployment/deployment.yaml
 ```
 
 ## Verify
@@ -32,5 +32,5 @@ sample-deployment-5595794bc9-rnb2s   1/1     Running   0          4m43s
 ## Cleanup
 
 ```bash
-kubectl delete -f deployment.yaml
+kubectl delete -f k8s101/Deployment/deployment.yaml
 ```
