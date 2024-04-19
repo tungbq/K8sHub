@@ -22,3 +22,10 @@ kubectl apply -f k8s101/CronJob/cron_sample.yaml
 # │ │ │ │ │
 # * * * * *
 ```
+
+## Cleanup
+
+```bash
+cd k8sHub
+kubectl delete -f k8s101/CronJob/cron_sample.yaml
+```
