@@ -8,3 +8,4 @@
 | 04  | PersistentVolume | [PersistentVolume](PersistentVolume/) | ✔️ Done |
 | 05  | StatefulSet      | [StatefulSet](StatefulSet/)           | ✔️ Done |
 | 06  | ReplicaSet       | [ReplicaSet](ReplicaSet/)             | ✔️ Done |
+| 07  | CronJob       | [CronJob](CronJob/)             | ✔️ Done |
