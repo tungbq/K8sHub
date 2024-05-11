@@ -26,15 +26,15 @@ Concepts doc ➡️ [here](https://kubernetes.io/docs/concepts/)
 
 ## K8s-101
 
-| ID  | Content          | URL                                   | Status  |
-| :-- | :--------------- | :------------------------------------ | :------ |
-| 01  | Deployment       | [Deployment](Deployment/)             | ✔️ Done |
-| 02  | Service          | [Service](Service/)                   | ✔️ Done |
-| 03  | ConfigMap        | [ConfigMap](ConfigMap/)               | ✔️ Done |
-| 04  | PersistentVolume | [PersistentVolume](PersistentVolume/) | ✔️ Done |
-| 05  | StatefulSet      | [StatefulSet](StatefulSet/)           | ✔️ Done |
-| 06  | ReplicaSet       | [ReplicaSet](ReplicaSet/)             | ✔️ Done |
-| 07  | CronJob          | [CronJob](CronJob/)                   | ✔️ Done |
+| ID  | Content          | URL                                            | Status  |
+| :-- | :--------------- | :--------------------------------------------- | :------ |
+| 01  | Deployment       | [Deployment](./k8s101/Deployment/)             | ✔️ Done |
+| 02  | Service          | [Service](./k8s101/Service/)                   | ✔️ Done |
+| 03  | ConfigMap        | [ConfigMap](./k8s101/ConfigMap/)               | ✔️ Done |
+| 04  | PersistentVolume | [PersistentVolume](./k8s101/PersistentVolume/) | ✔️ Done |
+| 05  | StatefulSet      | [StatefulSet](./k8s101/StatefulSet/)           | ✔️ Done |
+| 06  | ReplicaSet       | [ReplicaSet](./k8s101/ReplicaSet/)             | ✔️ Done |
+| 07  | CronJob          | [CronJob](./k8s101/CronJob/)                   | ✔️ Done |
 
 Full `k8s101` content, visit ➡️ [k8s101](./k8s101/README.md)
 
