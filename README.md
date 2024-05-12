@@ -35,6 +35,7 @@ Concepts doc ➡️ [here](https://kubernetes.io/docs/concepts/)
 | 05  | StatefulSet      | [StatefulSet](./k8s101/StatefulSet/)           | ✔️ Done |
 | 06  | ReplicaSet       | [ReplicaSet](./k8s101/ReplicaSet/)             | ✔️ Done |
 | 07  | CronJob          | [CronJob](./k8s101/CronJob/)                   | ✔️ Done |
+| 08  | Secret           | [Secret](./k8s101/Secret/)                     | ✔️ Done |
 
 Full `k8s101` content, visit ➡️ [k8s101](./k8s101/README.md)
 
