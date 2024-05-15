@@ -22,7 +22,7 @@
 
 ## K8s Concepts
 
-Concepts doc ➡️ [here](https://kubernetes.io/docs/concepts/)
+Kubernetes Concepts Document ➡️ [here](https://kubernetes.io/docs/concepts/)
 
 ## K8s-101
 
@@ -36,6 +36,7 @@ Concepts doc ➡️ [here](https://kubernetes.io/docs/concepts/)
 | 06  | ReplicaSet       | [ReplicaSet](./k8s101/ReplicaSet/)             | ✔️ Done |
 | 07  | CronJob          | [CronJob](./k8s101/CronJob/)                   | ✔️ Done |
 | 08  | Secret           | [Secret](./k8s101/Secret/)                     | ✔️ Done |
+| 09  | Namespace        | [Namespace](./k8s101/Namespace/)               | ✔️ Done |
 
 Full `k8s101` content, visit ➡️ [k8s101](./k8s101/README.md)
 
