@@ -5,12 +5,6 @@ Document: https://kubernetes.io/docs/concepts/overview/working-with-objects/name
 ## Create namespace
 
 ```bash
-kubectl create namespace new-namespace
-```
-
-## Create namespace
-
-```bash
 kubectl create namespace aaa-demo-namespace
 
 # Check
