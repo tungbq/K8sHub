@@ -1,37 +1,37 @@
 # Useful Kubectl command
 
-## Cluster
+## 1. Cluster
 
-### 1. Check nodes
+### Check nodes
 
 ```bash
 kubectl get nodes
 kubectl top nodes
 ```
 
-### 2. Cluster info
+### Cluster info
 
 ```bash
 kubectl cluster-info
 ```
 
-## Pod
+## 2. Pod
 
-### 1. Get pod
+### Get pod
 
 ```bash
 # kubectl get pods -n your_namespace
 kubectl get pods -n default
 ```
 
-### 2. Describe pod
+### Describe pod
 
 ```bash
 # kubectl describe pods your_podname -n your_namespace
 kubectl describe pods aaabbb -n default
 ```
 
-### 3. Log pod
+### Log pod
 
 ```bash
 # kubectl logs -f your_podname -n your_namespace
