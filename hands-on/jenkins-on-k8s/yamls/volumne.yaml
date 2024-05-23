@@ -21,7 +21,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   local:
-    path: /mnt
+    path: /mnt/d/CODING/K8sMount/jenkins
   nodeAffinity:
     required:
       nodeSelectorTerms:
