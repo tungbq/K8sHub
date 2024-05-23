@@ -24,6 +24,10 @@
 
 Kubernetes Concepts Document ➡️ [here](https://kubernetes.io/docs/concepts/)
 
+## K8s Command Cheatsheet
+
+- Visit [cheatsheet/command.md](./cheatsheet/command.md)
+
 ## K8s-101
 
 | ID  | Content          | URL                                            | Status  |
