@@ -30,3 +30,10 @@ kubectl get pods -n default
 # kubectl describe pods your_podname -n your_namespace
 kubectl describe pods aaabbb -n default
 ```
+
+### 3. Log pod
+
+```bash
+# kubectl logs -f your_podname -n your_namespace
+kubectl logs -f your_podname -n default
+```
