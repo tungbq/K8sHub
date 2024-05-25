@@ -50,9 +50,28 @@ kubectl logs -f your_podname -n default
 ```
 
 ### Execute
-Start a shell command in your pod
+
 ```bash
+# kubectl logs -f your_podname -n your_namespace
 kubectl exec -it your_podname -n default -- bash
+```
+
+## 3. Service
+
+### Get service
+
+```bash
+# kubectl get svc -n your_namespace
+kubectl get svc -n default
+```
+
+## 4. Port-forward
+
+### Forward a service
+
+```bash
+kubectl port-forward svc/service_name local_port:service_port
+# E.g: kubectl port-forward svc/nginx-ingress 8080:80
 ```
 
 See: [kubectl cheatsheet](https://kubernetes.io/docs/reference/kubectl/quick-reference/) for more kubectl command cheatsheet
