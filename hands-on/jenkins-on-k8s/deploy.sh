@@ -9,3 +9,5 @@ kubectl get deployments -n devops-tools
 
 kubectl apply -f yamls/services.yaml
 kubectl get services -n devops-tools
+
+# Port-forwarding
