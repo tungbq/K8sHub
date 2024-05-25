@@ -10,8 +10,6 @@ kubectl get <resource> -o json             # output in JSON format
 kubectl describe <resource> -n <namespace> # In specific namespace
 ```
 
-###
-
 ## 1. Cluster
 
 ### Check nodes
