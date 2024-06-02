@@ -118,8 +118,16 @@ podTemplate(containers: [
 
 - Jenkins will create a new Pod base on your Pod template the run the pipeline inside your pod.
   ![result-demo](./assets/result-demo.png)
-
 - Upon completion, the pod will automatically be removed
+
+- If you trigger the pipeline many times, you would see the `Pods` are created, ran, terminated along with the our builds
+
+  ```bash
+  # Check pods in devops-tools namespace
+  kubectl get pods -n devops-tools -w
+  ```
+
+  ![pod-stats](./assets/pod-stats.png)
 
 ## What's next?
 
