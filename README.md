@@ -53,3 +53,4 @@ Full `k8s101` content, visit ➡️ [k8s101](./k8s101/README.md)
 | 03  | Deploy basic microservices                            | [basic-microservices-application](./hands-on/basic-microservices-application/) | ✔️ Done |
 | 04  | Deploy a Nginx Edge proxy in front of k8s application | [k8s-edge-proxy](./hands-on/k8s-edge-proxy/)                                   | ✔️ Done |
 | 05  | Run a single-instance stateful MYSQL application      | [mysql-deployment-single](./hands-on/mysql-deployment-single-instance/)        | ✔️ Done |
+| 06  | Deploy and Setup Jenkins on Kubernetes cluster        | [jenkins-on-k8s](./hands-on/jenkins-on-k8s/)                                   | ✔️ Done |
