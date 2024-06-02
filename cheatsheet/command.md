@@ -65,7 +65,16 @@ kubectl exec -it your_podname -n default -- bash
 kubectl get svc -n default
 ```
 
-## 4. Port-forward
+## 4. PVC
+
+Get and delete PV
+
+```bash
+kubectl get pv
+kubectl delete pv jenkins-pv-volume
+```
+
+## 5. Port-forward
 
 ### Forward a service
 
