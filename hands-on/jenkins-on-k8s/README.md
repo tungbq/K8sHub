@@ -60,7 +60,7 @@ Now we have the Jenkins controller up and running in k8s cluster, let's add the 
 
 ### 1. Install Kubernetes plugin
 
-- Go to `Dashboard > Manage Jenkins > Plugins`
+- Go to `Dashboard > Manage Jenkins > Plugins` (http://localhost:8087/manage/pluginManager/available)
 - Search `Kubernetes` then install the plugin
 - Restart Jenkins after installed
 
