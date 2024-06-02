@@ -127,14 +127,11 @@ Up to this point, you are able to deploy and configure the Jenkins running on k8
 
 ## Cleanup
 
-Manually delete the namespace along with its resource and remove the PV
+Manually delete the namespace along with its resource and the PV
 
 ```bash
 # Terminate the namespace
 kubectl delete namespace devops-tools
-
-# Remove the PV
-kubectl delete pv jenkins-pv-volume
 ```
 
 Or run below script:
@@ -153,3 +150,6 @@ Here are some issue and resolution during the setup
 - INFO: Could not locate server among [http://jenkins-service.devops-tools.svc.cluster.local:8080]; waiting 10 seconds before retry:
   - Check the service port in `devops-tools` namespace
   - Check agent pod logs, `kubectl logs -f <your_pod_name> -n devops-tools`
+- Loosing connection to the Jenkins page (http://localhost:8087)
+  - Run `kubectl port-forward service/jenkins-service -n devops-tools 8087:8080` again
+  - Check if Jenkins pod is up and running
