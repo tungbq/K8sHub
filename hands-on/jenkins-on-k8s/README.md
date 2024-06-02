@@ -24,7 +24,7 @@ kubectl create namespace devops-tools
 kubectl port-forward service/jenkins-service -n devops-tools 8087:8080
 ```
 
-### 3. Get initialal password
+### 3. Get initial password
 
 Jenkins will ask for the initial Admin password when you access the dashboard for the first time.
 
@@ -45,9 +45,11 @@ kubectl exec -it <pod_name> cat /var/jenkins_home/secrets/initialAdminPassword -
 
   ![login-ok](./assets/login-ok.png)
 
-## Jenkins agents on k8s
+- Select install suggested plugin option on the initial setup
 
-Add the Kubernetes agents
+## Configure Jenkins agents on k8s
+
+Now we have the Jenkins controller up and running in k8s cluster, let's add the Kubernetes agents to run our pipeline
 
 ### 1. Install Kubernetes plugin
 
@@ -113,7 +115,13 @@ podTemplate(containers: [
 
 - Upon completion, the pod will automatically be removed
 
+## What's next?
+
+Up to this point, you are able to deploy and configure the Jenkins running on k8s cluster. You can create and play around with your own custome pipeline
+
 ## Troubleshooting
+
+Here are some issue and resolution during the setup
 
 - 1 node(s) didn't find available persistent volumes to bind
   - Try to delete the PV (with `kubectl delete pv jenkins-pv-volume`) the deploy again
