@@ -2,7 +2,7 @@
 
 kubectl create namespace devops-tools || true
 kubectl apply -f yamls/sevice_account.yaml
-kubectl apply -f yamls/volumne.yaml
+kubectl apply -f yamls/volume.yaml
 
 kubectl apply -f yamls/deployment.yaml
 kubectl get deployments -n devops-tools
