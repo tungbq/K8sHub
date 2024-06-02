@@ -47,4 +47,76 @@ kubectl exec -it <pod_name> cat /var/jenkins_home/secrets/initialAdminPassword -
 
 ## Jenkins agents on k8s
 
-- TODO
+Add the Kubernetes agents
+
+### 1. Install Kubernetes plugin
+
+- Go to `Dashboard > Manage Jenkins > Plugins`
+- Search `Kubernetes` then install the plugin
+- Restart Jenkins after installed
+
+### 2. Configure the Kubernetes plugin
+
+- Go to `Dashboard > Manage Jenkins > Clouds` (http://localhost:8087/manage/cloud/)
+- Select `New cloud`
+- Input the cloud name (e.g: `k8s-agents`) then select `Create`
+- Now we will be redirected to the configuration page
+- Since we have Jenkins inside the Kubernetes cluster with a service account to deploy the agent pods, we don’t have to mention the `Kubernetes URL` or certificate key.
+- Major fields configuration reference for Jenkins inside the Kubernetes cluster:
+
+  - **Kubernetes URL**: Leave empty
+  - **Kubernetes server certificate key**: Leave empty
+  - **Kubernetes Namespace**: `devops-tools`
+  - **Credentials**: Leave None
+  - **Jenkins URL**: Input the URL with format: `http://<service-name>.<namespace>.svc.cluster.local:8080` (In my case, it is: http://jenkins-service.devops-tools.svc.cluster.local:8080)
+
+- Select `Test connection` for verify connection to the cluster.
+- If you get the output similar to: `Connected to Kubernetes vx.y.z`. Congrats, you've succesfyully connect the cluster as Jenkins agent
+  ![k8s-agent-ok](./assets/k8s-agent-ok.png)
+
+## Run a sample job on k8s pod
+
+Now we have the Jenkins controller and configured the k8s cluster as Jenkins agents, let's start running the sample job on the Pod
+
+- Goto the Jenkins Homepage, select `New item`
+- Select `Pipeline` type, input a name (for example: `Demo-Run-Shell-Inside-K8s-Pod`), then `Create`
+- In the `Pipeline` section, input following script
+
+```groovy
+podTemplate(containers: [
+    containerTemplate(
+        name: 'jnlp',
+        image: 'jenkins/inbound-agent:latest'
+        )
+  ]) {
+
+    node(POD_LABEL) {
+        stage('Shell') {
+            container('jnlp') {
+                stage('Shell Execution') {
+                    sh '''
+                    echo "Hello! Running from shell"
+                    '''
+                }
+            }
+        }
+
+    }
+}
+```
+
+- Select `Build Now` to kick up a new run:
+  ![start-a-run](./assets/start-a-run.png)
+
+- Jenkins will create a new Pod base on your Pod template the run the pipeline inside your pod.
+  ![result-demo](./assets/result-demo.png)
+
+- Upon completion, the pod will automatically be removed
+
+## Troubleshooting
+
+- 1 node(s) didn't find available persistent volumes to bind
+  - Try to delete the PV (with `kubectl delete pv jenkins-pv-volume`) the deploy again
+- INFO: Could not locate server among [http://jenkins-service.devops-tools.svc.cluster.local:8080]; waiting 10 seconds before retry:
+  - Check the service port in `devops-tools` namespace
+  - Check agent pod logs, `kubectl logs -f <your_pod_name> -n devops-tools`
