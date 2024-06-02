@@ -1,10 +1,11 @@
 # Jenkins on k8s
 
-This hands on we cover:
+In this hands-on, we'll cover:
 
 - Deploy Jenkins controller on k8s cluster
-- Configure K8s cluster as Jenkins agents
-- Create and run a sample pipeline on K8s Pod
+- Configure k8s cluster as Jenkins agents
+- Create and run a sample pipeline on a k8s Pod
+- Watch the Pod life cycle for a pipeline run
 
 ## Document
 
