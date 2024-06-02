@@ -21,15 +21,16 @@ spec:
   accessModes:
     - ReadWriteOnce
   local:
-    path: /mnt/d/CODING/K8sMount/jenkins
+    path: /mnt
   nodeAffinity:
     required:
       nodeSelectorTerms:
         - matchExpressions:
             - key: kubernetes.io/hostname
               operator: In
+              # Replace by your node name
               values:
-                - kind-control-plane
+                - demo-jenkins-cluster-control-plane
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
