@@ -1,5 +1,11 @@
 # Jenkins on k8s
 
+This hands on we cover:
+
+- Deploy Jenkins controller on k8s cluster
+- Configure K8s cluster as Jenkins agents
+- Create and run a sample pipeline on K8s Pod
+
 ## Document
 
 - https://www.jenkins.io/doc/book/installing/kubernetes/
@@ -118,6 +124,13 @@ podTemplate(containers: [
 ## What's next?
 
 Up to this point, you are able to deploy and configure the Jenkins running on k8s cluster. You can create and play around with your own custome pipeline
+
+## Cleanup
+
+```bash
+cd hands-on/jenkins-on-k8s
+./cleanup.sh
+```
 
 ## Troubleshooting
 
