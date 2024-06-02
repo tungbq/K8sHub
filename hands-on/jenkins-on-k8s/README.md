@@ -79,7 +79,7 @@ Now we have the Jenkins controller up and running in k8s cluster, let's add the 
   - **Jenkins URL**: Input the URL with format: `http://<service-name>.<namespace>.svc.cluster.local:8080` (In my case, it is: http://jenkins-service.devops-tools.svc.cluster.local:8080)
 
 - Select `Test connection` for verify connection to the cluster.
-- If you get the output similar to: `Connected to Kubernetes vx.y.z`. Congrats, you've succesfyully connect the cluster as Jenkins agent
+- If you get the output similar to: `Connected to Kubernetes vx.y.z`. Congrats, you've succesfully connect the cluster as Jenkins agent
   ![k8s-agent-ok](./assets/k8s-agent-ok.png)
 
 ## Run a sample job on k8s pod
@@ -126,6 +126,18 @@ podTemplate(containers: [
 Up to this point, you are able to deploy and configure the Jenkins running on k8s cluster. You can create and play around with your own custome pipeline
 
 ## Cleanup
+
+Manually delete the namespace along with its resource and remove the PV
+
+```bash
+# Terminate the namespace
+kubectl delete namespace devops-tools
+
+# Remove the PV
+kubectl delete pv jenkins-pv-volume
+```
+
+Or run below script:
 
 ```bash
 cd hands-on/jenkins-on-k8s
