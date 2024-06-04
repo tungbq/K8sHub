@@ -28,7 +28,7 @@ Before start, we need to prepare the K8s YAML files as below:
 
 _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are available at: [K8sHub/hands-on/jenkins-on-k8s/yamls](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls)
 
-- volume.yaml: To create the persitent volumne for our Jenkins instance on k8s (Replace the `demo-jenkins-cluster-control-plane` by your node name)
+- [volume.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/volume.yaml): To create the persitent volumne for our Jenkins instance on k8s (Replace the `demo-jenkins-cluster-control-plane` by your node name)
 
   ```yaml
   # volume.yaml
@@ -80,7 +80,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
         storage: 3Gi
   ```
 
-- service-account.yaml: To create `jenkins-admin` service account for the `Deployment` usage
+- [service-account.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/service-account.yaml): To create `jenkins-admin` service account for the `Deployment` usage
 
   ```yaml
   # service-account.yaml
@@ -114,7 +114,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
       namespace: devops-tools
   ```
 
-- deployment.yaml: To deploy latest `jenkins/jenkins:lts` Jenkins version with `jenkins-admin` service account and us `jenkins-pv-claim` persistent volume
+- [deployment.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/deployment.yaml): To deploy latest `jenkins/jenkins:lts` Jenkins version with `jenkins-admin` service account and us `jenkins-pv-claim` persistent volume
 
   ```yaml
   # deployment.yaml
@@ -177,7 +177,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
               claimName: jenkins-pv-claim
   ```
 
-- services.yaml: To expose the `jenkins-server` as a k8s service
+- [services.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/services.yaml): To expose the `jenkins-server` as a k8s service
 
   ```yaml
   # services.yaml
