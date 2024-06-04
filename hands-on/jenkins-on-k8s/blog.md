@@ -18,6 +18,7 @@ Before you start, ensure you have:
 
 - [kubernetes.io](https://kubernetes.io/docs/home/).
 - [Installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/).
+- [www.jenkins.io/doc](https://www.jenkins.io/doc/).
 
 ## Deploy Jenkins on Kubernetes and run your pipeline 🔥
 
