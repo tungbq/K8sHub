@@ -10,13 +10,14 @@ This hands-on is for a PoC or Pilot environment, to explore the Jenkins and Kube
 
 Before you start, ensure you have:
 
-- A running Kubernetes cluster (I used [kind](https://kind.sigs.k8s.io/) for my k8s local environment).
-- kubectl configured to interact with your cluster.
+- A running [Kubernetes cluster](https://kubernetes.io/docs/setup/) (I used [kind](https://kind.sigs.k8s.io/) for my k8s local environment).
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) configured to interact with your cluster.
 - Basic knowledge of Kubernetes and Jenkins.
 
 # Documentation Reference 📖
 
-For more detailed information, you can refer to the official Jenkins documentation on [installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/).
+- [kubernetes.io](https://kubernetes.io/docs/home/).
+- [Installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/).
 
 # Deploy Jenkins and run pipeline on Kubernetes
 
