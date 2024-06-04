@@ -2,11 +2,11 @@
 
 In this hands-on guide, we'll walk through deploying Jenkins on a Kubernetes (k8s) cluster. You'll learn how to set up the Jenkins controller, configure k8s clusters as Jenkins agents, create and run a sample pipeline on a k8s Pod, and monitor the Pod's lifecycle during a pipeline run.
 
-# Environment
+# Environment ☁️
 
 This hands-on is for a PoC or Pilot environment, to explore the Jenkins and Kubernetes features
 
-# Prerequisites
+# Prerequisites 🔓
 
 Before you start, ensure you have:
 
@@ -19,9 +19,9 @@ Before you start, ensure you have:
 - [kubernetes.io](https://kubernetes.io/docs/home/).
 - [Installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/).
 
-# Deploy Jenkins and run pipeline on Kubernetes
+# Deploy Jenkins on Kubernetes and run your pipeline 🔥
 
-Let's start deploying and use Jenkins on Kubernetes follow below steps:
+Let's start deploying and using Jenkins on Kubernetes by following below steps:
 
 ## 1. Prepare K8s Manifest YAML files
 
@@ -358,7 +358,7 @@ cd hands-on/jenkins-on-k8s
 ./cleanup.sh
 ```
 
-# Troubleshooting
+# Troubleshooting 🔨
 
 Common Issues and Solutions:
 
@@ -366,6 +366,6 @@ Common Issues and Solutions:
 - Connection issues to the Jenkins service: Verify the service port and check the agent pod logs using `kubectl logs -f <your_pod_name> -n devops-tools`.
 - Losing connection to Jenkins page: Re-run `kubectl port-forward service/jenkins-service -n devops-tools 8082:8080` and ensure the Jenkins pod is running.
 
-# Conclusion
+# Conclusion ✒️
 
 By following this guide, you should have a functional Jenkins setup on Kubernetes, allowing you to run pipelines within k8s Pods. Experiment with custom pipelines and explore more advanced Jenkins features on Kubernetes. Happy DevOps-ing!
