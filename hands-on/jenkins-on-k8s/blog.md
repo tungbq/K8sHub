@@ -27,9 +27,9 @@ Let's start deploying and using Jenkins on Kubernetes by following below steps:
 
 Before start, we need to prepare the K8s YAML files.
 
-_NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are available at: [K8sHub/hands-on/jenkins-on-k8s/yamls](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls). If you want to use the hands-on example and all-in-one script from my repo (desrible later in the next section), you do not need to create these files manually, just refer it as a captured version of the one in hands-on repository. Otherwise, create these files in your PC with following content and name:
+_NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are available at: [K8sHub/hands-on/jenkins-on-k8s/yamls](https://github.com/tungbq/K8sHub/blob/main/hands-on/jenkins-on-k8s/yamls). If you want to use the hands-on example and all-in-one script from my repo (desrible later in the next section), you do not need to create these files manually, just refer them as captured version of the ones in hands-on repository. Otherwise, create these files in your PC with following content and name:
 
-- [volume.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/volume.yaml): To create the persitent volumne for our Jenkins instance on k8s (Replace the `demo-jenkins-cluster-control-plane` by your node name)
+- [volume.yaml](https://github.com/tungbq/K8sHub/blob/main/hands-on/jenkins-on-k8s/yamls/volume.yaml): To create the persitent volumne for our Jenkins instance on k8s (Replace the `demo-jenkins-cluster-control-plane` by your node name)
 
   ```yaml
   ## volume.yaml
@@ -82,7 +82,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
         storage: 3Gi
   ```
 
-- [service_account.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/service_account.yaml): To create `jenkins-admin` service account for the `Deployment` usage
+- [service_account.yaml](https://github.com/tungbq/K8sHub/blob/main/hands-on/jenkins-on-k8s/yamls/sevice_account.yaml): To create `jenkins-admin` service account for the `Deployment` usage
 
   ```yaml
   ## service_account.yaml
@@ -116,7 +116,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
       namespace: devops-tools
   ```
 
-- [deployment.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/deployment.yaml): To deploy latest `jenkins/jenkins:lts` Jenkins version with `jenkins-admin` service account and us `jenkins-pv-claim` persistent volume
+- [deployment.yaml](https://github.com/tungbq/K8sHub/blob/main/hands-on/jenkins-on-k8s/yamls/deployment.yaml): To deploy latest `jenkins/jenkins:lts` Jenkins version with `jenkins-admin` service account and us `jenkins-pv-claim` persistent volume
 
   ```yaml
   ## deployment.yaml
@@ -179,7 +179,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
               claimName: jenkins-pv-claim
   ```
 
-- [services.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/services.yaml): To expose the `jenkins-server` as a k8s service
+- [services.yaml](https://github.com/tungbq/K8sHub/blob/main/hands-on/jenkins-on-k8s/yamls/services.yaml): To expose the `jenkins-server` as a k8s service
 
   ```yaml
   ## services.yaml
