@@ -56,6 +56,7 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
     accessModes:
       - ReadWriteOnce
     local:
+      # Replace by your desired path
       path: /mnt/jenkins
     nodeAffinity:
       required:
