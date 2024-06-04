@@ -24,9 +24,9 @@ Let's start deploying and use Jenkins on Kubernetes follow below steps:
 
 ## 1. Prepare K8s Manifest YAML files
 
-Before start, we need to prepare the K8s YAML files as below:
+Before start, we need to prepare the K8s YAML files.
 
-_NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are available at: [K8sHub/hands-on/jenkins-on-k8s/yamls](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls)
+_NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are available at: [K8sHub/hands-on/jenkins-on-k8s/yamls](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls). If you want to use the hands-on example and all-in-one script from my repo (desrible later in the next section), you do not need to create these files manually, just refer it as a captured version of the one in hands-on repository. Otherwise, create these files in your PC with following content and name:
 
 - [volume.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/volume.yaml): To create the persitent volumne for our Jenkins instance on k8s (Replace the `demo-jenkins-cluster-control-plane` by your node name)
 
