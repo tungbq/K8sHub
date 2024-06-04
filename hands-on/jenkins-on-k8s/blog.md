@@ -215,9 +215,13 @@ Clone the repo contains the hands-on example. Then, run the deployment script:
 git clone https://github.com/tungbq/K8sHub.git
 cd K8sHub/hands-on/jenkins-on-k8s
 
+# In `hands-on/jenkins-on-k8s/yamls/deployment.yaml` replace the `demo-jenkins-cluster-control-plane` value by your node name
+
 # Create new `devops-tools` namespace
 kubectl create namespace devops-tools
 
+# Now run the deploy script
+./deploy.sh
 ```
 
 ## Option 2. Deploy Jenkins manually
