@@ -82,10 +82,10 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
         storage: 3Gi
   ```
 
-- [service-account.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/service-account.yaml): To create `jenkins-admin` service account for the `Deployment` usage
+- [service_account.yaml](https://github.com/tungbq/K8sHub/tree/main/hands-on/jenkins-on-k8s/yamls/service_account.yaml): To create `jenkins-admin` service account for the `Deployment` usage
 
   ```yaml
-  # service-account.yaml
+  # service_account.yaml
   ---
   apiVersion: rbac.authorization.k8s.io/v1
   kind: ClusterRole
