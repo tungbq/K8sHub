@@ -206,9 +206,9 @@ _NOTE_: All the YAML files to deploy Jenkins controller on Kubernetes are availa
 
 ## 2. Deploy Jenkins Controller
 
-You can deploy it manually or using my all-in-one deploy script, choose 1 of 2 option below:
+You can deploy it manually or using my all-in-one deploy script, choose one of the following options:
 
-## Option 1. Deploy Jenkins with prepare scipt
+### Option 1. Deploy Jenkins with prepare scipt
 
 Clone the repo contains the hands-on example. Then, run the deployment script:
 
@@ -217,7 +217,7 @@ Clone the repo contains the hands-on example. Then, run the deployment script:
 git clone https://github.com/tungbq/K8sHub.git
 cd K8sHub/hands-on/jenkins-on-k8s
 
-# In `hands-on/jenkins-on-k8s/yamls/deployment.yaml` replace the `demo-jenkins-cluster-control-plane` value by your node name
+# NOTE: In `hands-on/jenkins-on-k8s/yamls/deployment.yaml` replace the `demo-jenkins-cluster-control-plane` value by your node name
 
 # Create new `devops-tools` namespace
 kubectl create namespace devops-tools
@@ -226,10 +226,10 @@ kubectl create namespace devops-tools
 ./deploy.sh
 ```
 
-## Option 2. Deploy Jenkins manually
+### Option 2. Deploy Jenkins manually
 
 ```bash
-# Create 4 files as describle in previous section
+# Ensure you created 4 k8s manifest YAML files as describle in previous section
 kubectl create namespace devops-tools
 kubectl apply -f sevice_account.yaml
 kubectl apply -f volume.yaml
@@ -239,16 +239,16 @@ kubectl apply -f services.yaml
 
 ## 3. Access Jenkins Controller
 
-## 3.1. Port-Forwarding
+### 3.1. Port-Forwarding
 
 Open a new terminal and set up port forwarding to access Jenkins:
 
 ```bash
-# Replace 8082 with an available port on your PC
-kubectl port-forward service/jenkins-service -n devops-tools 8082:8080
+# Replace 8087 with an available port on your PC
+kubectl port-forward service/jenkins-service -n devops-tools 8087:8080
 ```
 
-## 3.2. Get Initial Password
+### 3.2. Get Initial Password
 
 Jenkins requires an initial admin password for first-time access. Retrieve it with the following commands:
 
@@ -261,22 +261,22 @@ kubectl exec -it <pod_name> cat /var/jenkins_home/secrets/initialAdminPassword -
 # Sample output: d72493ce44fb48bc8833da94b40cdd68
 ```
 
-## 3.3. Access Jenkins
+### 3.3. Access Jenkins
 
-Open your browser and navigate to http://localhost:8082. Log in using the initial password obtained earlier, install the suggested plugins, and create an admin user.
+Open your browser and navigate to http://localhost:8087. Log in using the initial password obtained earlier, install the suggested plugins, and create an admin user.
 ![login-ok](https://github.com/tungbq/K8sHub/blob/4d841a696d93a62338295169a7afb89c910036d2/hands-on/jenkins-on-k8s/assets/login-ok.png?raw=true)
 
 ## 4. Configure Jenkins Agents on Kubernetes
 
 With Jenkins up and running, the next step is to configure Kubernetes as Jenkins agents.
 
-## 4.1. Install Kubernetes Plugin
+### 4.1. Install Kubernetes Plugin
 
-Navigate to Dashboard > Manage Jenkins > Plugins (http://localhost:8082/manage/pluginManager/available), search for the "Kubernetes" plugin, and install it. Restart Jenkins after installation.
+Navigate to Dashboard > Manage Jenkins > Plugins (http://localhost:8087/manage/pluginManager/available), search for the "Kubernetes" plugin, and install it. Restart Jenkins after installation.
 
-## 4.2. Configure the Kubernetes Plugin
+### 4.2. Configure the Kubernetes Plugin
 
-Navigate to Dashboard > Manage Jenkins > Clouds (http://localhost:8082/manage/cloud/). Select "New cloud" and input the cloud name (e.g., k8s-agents), then select "Create."
+Navigate to Dashboard > Manage Jenkins > Clouds (http://localhost:8087/manage/cloud/). Select "New cloud" and input the cloud name (e.g., k8s-agents), then select "Create."
 
 Configure the following fields:
 
@@ -293,11 +293,11 @@ Select "Test connection" to verify the connection. If you see `Connected to Kube
 
 Now that the Jenkins controller and k8s agents are configured, let's run a sample job on a Pod.
 
-## 5.1. Create a New Pipeline
+### 5.1. Create a New Pipeline
 
 Go to the Jenkins homepage, select "New item," choose "Pipeline," input a name (e.g., Demo-Run-Shell-Inside-K8s-Pod), and create.
 
-## 5.2. Define the Pipeline Script
+### 5.2. Define the Pipeline Script
 
 In the pipeline configuration section, input the following script:
 
@@ -324,14 +324,14 @@ podTemplate(containers: [
 }
 ```
 
-## 5.3. Build the Pipeline
+### 5.3. Build the Pipeline
 
 Select "Build Now" to trigger the pipeline.
 ![start-a-run](https://raw.githubusercontent.com/tungbq/K8sHub/main/hands-on/jenkins-on-k8s/assets/start-a-run.png?raw=true)
 Jenkins will create a new Pod based on your template and run the pipeline inside the Pod.
 ![result-demo](https://raw.githubusercontent.com/tungbq/K8sHub/main/hands-on/jenkins-on-k8s/assets/result-demo.png?raw=true)
 
-## 5.4. Monitor Pod Lifecycle
+### 5.4. Monitor Pod Lifecycle
 
 To see the Pods created and terminated with each build, use the following command:
 
@@ -364,7 +364,7 @@ Common Issues and Solutions:
 
 - Persistent volume binding issues: Delete the PV with `kubectl delete pv jenkins-pv-volume` and redeploy.
 - Connection issues to the Jenkins service: Verify the service port and check the agent pod logs using `kubectl logs -f <your_pod_name> -n devops-tools`.
-- Losing connection to Jenkins page: Re-run `kubectl port-forward service/jenkins-service -n devops-tools 8082:8080` and ensure the Jenkins pod is running.
+- Losing connection to Jenkins page: Re-run `kubectl port-forward service/jenkins-service -n devops-tools 8087:8080` and ensure the Jenkins pod is running.
 
 # Conclusion ✒️
 
