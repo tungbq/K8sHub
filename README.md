@@ -41,6 +41,7 @@ Kubernetes Concepts Document ➡️ [here](https://kubernetes.io/docs/concepts/)
 | 07  | CronJob          | [CronJob](./k8s101/CronJob/)                   | ✔️ Done |
 | 08  | Secret           | [Secret](./k8s101/Secret/)                     | ✔️ Done |
 | 09  | Namespace        | [Namespace](./k8s101/Namespace/)               | ✔️ Done |
+| 10  | HPA              | [HPA](./k8s101/HPA/)                           | ✔️ Done |
 
 Full `k8s101` content, visit ➡️ [k8s101](./k8s101/README.md)
 
